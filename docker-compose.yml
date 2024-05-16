@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  web_dev:
+    build: .
+    restart: always
+    entrypoint: ./docker-entrypoint.sh
+    volumes:
+      - .:/fabzone
+    ports:
+      - "8000:8000"
